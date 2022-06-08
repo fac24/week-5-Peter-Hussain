@@ -9,7 +9,6 @@ function App() {
   return (
     <PageLayout>
       <NavBar />
-      <GameCard>a</GameCard>
     </PageLayout>
   );
 }
