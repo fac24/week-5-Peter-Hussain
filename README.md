@@ -10,4 +10,3 @@
 3. npm install to install the dependencies
 4. npm run dev start the dev server
 
-### Open the project in your editor—you should see an example app setup. Feel free to delete the logo/CSS files that you won’t be using.
