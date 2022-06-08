@@ -128,38 +128,18 @@ table {
   font-size: 62.5%;
 }
 
-body {
-  /* background: aquamarine; */
+.page-layout {
+  background: aquamarine;
 }
 
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 .logo {
   font-size: 3rem;
   font-weight: bold;
-}
-
-.restart-button {
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: black;
-  padding: 1rem 2rem;
-  background: rgb(245, 169, 169);
-  border-radius: 1.4rem;
-}
-
-.game-card {
-  display: grid;
-  place-items: center;
-  height: 7.253rem;
-  width: 7.253rem;
-  border-radius: 50%;
-  background-color: rgba(3, 66, 46);
-  border: black 0.4rem solid;
 }
