@@ -1,3 +1,10 @@
+import React from "react";
+
 export default function GameCard(props) {
-  return <div className="game-card">{props.children}</div>;
+  console.log("hi");
+  return (
+    <div>
+      <div className="game-card">{props.children}</div>
+    </div>
+  );
 }

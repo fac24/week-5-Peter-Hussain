@@ -1,14 +1,13 @@
-import React from "react";
 import "./App.css";
-import PageLayout from "./components/PageLayout";
-import x from "./components/GameLogic.js";
 import NavBar from "./components/NavBar";
-import GameCard from "./components/GameCard";
+import PageLayout from "./components/PageLayout";
+import GameCardContainer from "./components/GameCardContainer";
 
 function App() {
   return (
     <PageLayout>
       <NavBar />
+      <GameCardContainer />
     </PageLayout>
   );
 }

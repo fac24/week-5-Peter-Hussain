@@ -126,10 +126,14 @@ table {
 }
 :root {
   font-size: 62.5%;
+  --broccoli-green-600: #16a34a;
+  --broccoli-green-300: #6ee7b7;
+  --black: black;
 }
 
-body {
-  /* background: aquamarine; */
+.page-layout {
+  max-width: 100rem;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -142,6 +146,7 @@ body {
 .logo {
   font-size: 3rem;
   font-weight: bold;
+  color: var(--broccoli-green-600);
 }
 
 .restart-button {
@@ -157,9 +162,19 @@ body {
 .game-card {
   display: grid;
   place-items: center;
-  height: 7.253rem;
-  width: 7.253rem;
+  height: clamp(7.253rem, 4.0051rem + 8.661vw, 11.8rem);
+  width: clamp(7.253rem, 4.0051rem + 8.661vw, 11.8rem);
   border-radius: 50%;
-  background-color: rgba(3, 66, 46);
+  background-color: var(--broccoli-green-300);
   border: black 0.4rem solid;
+}
+
+.game-card-container {
+  height: clamp(32.7rem, 18.0571rem + 39.0476vw, 53.2rem);
+  max-width: clamp(32.7rem, 18.0571rem + 39.0476vw, 53.2rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem auto;
 }
