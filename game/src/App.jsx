@@ -1,13 +1,13 @@
 import "./App.css";
 import NavBar from "./components/NavBar";
 import PageLayout from "./components/PageLayout";
-import GameGrid from "./components/GameGrid";
+import GameCardContainer from "./components/GameCardContainer";
 
 function App() {
   return (
     <PageLayout>
       <NavBar />
-      <GameGrid />
+      <GameCardContainer />
     </PageLayout>
   );
 }
