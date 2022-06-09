@@ -11,8 +11,8 @@ let githubUsers = [
   "oliverjam",
   "Albadylic",
   "lascellesabercrombie",
-  "Bereketmebrahtu",
-  "minju25kim",
+  "Rich-Harris",
+  "sonianb",
   "AsmahanM",
 ];
 
