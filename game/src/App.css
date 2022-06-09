@@ -167,6 +167,12 @@ table {
   border-radius: 50%;
   background-color: var(--broccoli-green-300);
   border: black 0.4rem solid;
+  overflow: hidden;
+}
+
+.game-card-img {
+  height: clamp(7.253rem, 4.0051rem + 8.661vw, 11.8rem);
+  width: clamp(7.253rem, 4.0051rem + 8.661vw, 11.8rem);
 }
 
 .game-card-container {
