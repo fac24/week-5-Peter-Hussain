@@ -61,6 +61,6 @@ export default function GameCardContainer() {
       </div>
     );
   } else {
-    return <div className="game-card-container">loading</div>;
+    return <div className="game-card-container logo">loading......</div>;
   }
 }
