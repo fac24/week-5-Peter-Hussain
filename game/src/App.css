@@ -166,6 +166,10 @@ table {
   width: clamp(7.253rem, 4.0051rem + 8.661vw, 11.8rem);
   border-radius: 50%;
   background-color: var(--broccoli-green-300);
+  background-image: url("https://source.unsplash.com/random/1000x1000/?broccoli");
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCGeo2qpfyNViQHTQC0pPMbHUvlXymi_fRkA&usqp=CAU");
+  background-position: center;
+  background-size: 100%;
   border: black 0.4rem solid;
   overflow: hidden;
 }
@@ -193,4 +197,8 @@ table {
 .black {
   display: block;
   font-size: 5rem;
+}
+
+.hidden {
+  opacity: 0;
 }

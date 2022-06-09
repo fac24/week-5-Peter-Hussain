@@ -11,7 +11,7 @@ let githubUsers = [
   "oliverjam",
   "Albadylic",
   "lascellesabercrombie",
-  "Rich-Harris",
+  "Bereketmebrahtu",
   "sonianb",
   "AsmahanM",
 ];
@@ -22,7 +22,7 @@ function shuffle(array) {
   let i;
   let j;
 
-  // While there remain elements to shuffle…
+  // While  remain elements to shuffle…
 
   while (arrayLength) {
     i = Math.floor(Math.random() * arrayLength--);
@@ -33,6 +33,18 @@ function shuffle(array) {
   }
   return array;
 }
+
+// we need target the img querey selector
+// we need to find the first value card and second value you card
+//taget images based on id
+// place them in sparet var
+// match them based on classes
+
+const handdleClick = (e) => {
+  let img = e.target;
+  img.classList.toggle("hidden");
+  console.log(img);
+};
 
 export default function GameCardContainer() {
   const [users, setUsers] = useState([]);
@@ -56,7 +68,13 @@ export default function GameCardContainer() {
     return (
       <div className="game-card-container">
         {users.map((item, key) => (
-          <GameCard id={key} img={item.avatar_url} />
+          <GameCard
+            id={key}
+            keys={item.id + key}
+            img={item.avatar_url}
+            className={`game-card-img hidden ${item.login}`}
+            onClick={handdleClick}
+          />
         ))}
       </div>
     );
