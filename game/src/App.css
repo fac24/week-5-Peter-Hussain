@@ -184,3 +184,13 @@ table {
   justify-content: space-between;
   margin: 2rem auto;
 }
+
+.rich {
+  height: 40%;
+  border-radius: 50%;
+}
+
+.black {
+  display: block;
+  font-size: 5rem;
+}

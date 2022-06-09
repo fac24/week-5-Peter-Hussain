@@ -61,6 +61,17 @@ export default function GameCardContainer() {
       </div>
     );
   } else {
-    return <div className="game-card-container logo">loading......</div>;
+    return (
+      <div className="game-card-container logo black">
+        <div>
+          <img
+            className="rich"
+            src="https://avatars.githubusercontent.com/u/1162160?v=4"
+            alt="rich founder of svelte"
+          />
+        </div>
+        daam react aint reacting........
+      </div>
+    );
   }
 }
