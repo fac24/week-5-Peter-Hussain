@@ -16,13 +16,31 @@ let githubUsers = [
   "AsmahanM",
 ];
 
+function shuffle(array) {
+  let arrayLength = array.length;
+  // var m = array.length, t, i;
+  let i;
+  let j;
+
+  // While there remain elements to shuffle…
+
+  while (arrayLength) {
+    i = Math.floor(Math.random() * arrayLength--);
+    j = array[arrayLength];
+
+    array[arrayLength] = array[i];
+    array[i] = j;
+  }
+  return array;
+}
+
 export default function GameCardContainer() {
   const [users, setUsers] = useState([]);
 
   // best placed to console log
 
   useEffect(() => {
-    console.log(users);
+    setUsers(shuffle(users));
   }, [users]); // function will run when once users changes
   useEffect(() => {
     // only runs once because the dependency is empty. not listening for any changes.
