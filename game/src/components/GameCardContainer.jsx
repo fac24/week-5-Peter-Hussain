@@ -1,13 +1,10 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import GameCard from "./GameCard";
 
-let userUrl = [];
-
-async function fetchUser(user) {
-  fetch(`https://api.github.com/users/${user}`)
-    .then((res) => res.json())
-    .then((data) => userUrl.push(data));
-}
+// fetch data from github for each user
+//write a function fetch the userInfo from the api
+// set the state to the an array of all user object from github
+//then render it
 let githubUsers = [
   "sofer",
   "reubengt",
@@ -19,44 +16,33 @@ let githubUsers = [
   "AsmahanM",
 ];
 
-githubUsers.map((user) => {
-  fetchUser(user);
-});
-
 export default function GameCardContainer() {
-  const [username, setUsername] = React.useState(userUrl);
+  const [users, setUsers] = useState([]);
 
-  return (
-    <div className="game-card-container">
-      <GameCard id="1" key="1" img={userUrl[0].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[1].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[2].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[3].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[4].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[5].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[6].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[7].avatar_url} />
+  // best placed to console log
 
-      <GameCard id="1" key="1" img={userUrl[0].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[1].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[2].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[3].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[4].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[5].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[6].avatar_url} />
-      <GameCard id="1" key="1" img={userUrl[7].avatar_url} />
-    </div>
-  );
+  useEffect(() => {
+    console.log(users);
+  }, [users]); // function will run when once users changes
+  useEffect(() => {
+    // only runs once because the dependency is empty. not listening for any changes.
+    githubUsers.map((user) => {
+      fetch(`https://api.github.com/users/${user}`)
+        .then((res) => res.json())
+        .then((data) => setUsers((x) => [...x, data]))
+        .catch((error) => console.error(error));
+    });
+  }, []);
+
+  if (users.length === 16) {
+    return (
+      <div className="game-card-container">
+        {users.map((item, key) => (
+          <GameCard id={key} img={item.avatar_url} />
+        ))}
+      </div>
+    );
+  } else {
+    return <div className="game-card-container">loading</div>;
+  }
 }
-
-// if (userUrl.length === 8) {
-//   return (
-//     <div className="game-card-container">
-//       {userUrl.map((item, key) => (
-//         <GameCard key={key} img={item.avatar_url} />
-//       ))}
-//     </div>
-//   );
-// } else {
-//   return <div className="game-card-container">loading</div>;
-// }
