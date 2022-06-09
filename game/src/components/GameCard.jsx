@@ -3,8 +3,10 @@ import React from "react";
 export default function GameCard(props) {
   return (
     <div>
-      <div id={props.id} key={props.keys} className="game-card">
+      <div className="game-card">
         <img
+          id={props.id}
+          key={props.keys}
           onClick={props.onClick}
           src={props.img}
           alt="game card"

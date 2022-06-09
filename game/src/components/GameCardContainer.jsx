@@ -43,11 +43,12 @@ function shuffle(array) {
 const handdleClick = (e) => {
   let img = e.target;
   img.classList.toggle("hidden");
-  console.log(img);
 };
 
 export default function GameCardContainer() {
   const [users, setUsers] = useState([]);
+  // const [state, setState] = useState("");
+  // const [click, setClicks] = useState(0);
 
   // best placed to console log
 
