@@ -4,6 +4,12 @@
 
 ## Deployed game here 🥦🥛 [Broccoli Milk](https://broccoli-milk.netlify.app/) 🥦🥛 on Netlify.
 
+# Introduction:
+
+- Broccoli theme game where user has to type github username.
+- user will have to guess and pair the correct hidden user underneath the broccoli's
+- user then wins a broccoli.
+
 # Designed and Developed by:
 
 - [Hussain](https://github.com/HusJAW): DevOps/Quality Assurance
