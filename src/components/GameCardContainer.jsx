@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import GameCard from "./GameCard";
-import Broccoli from "./Broccoli";
 
 // fetch data from github for each user
 //write a function fetch the userInfo from the api
@@ -16,6 +15,18 @@ let githubUsers = [
   "Bereketmebrahtu",
   "sonianb",
   "AsmahanM",
+  "alternadiva",
+  "Glombort",
+  "HusJAW",
+  "joe-dev-public",
+  "mariaalouisaa",
+  "miahbates",
+  "millipede-cpu",
+  "minju25kim",
+  "OrianP",
+  "paologhidoni",
+  "PJSalter",
+  "vasystus",
 ];
 
 function shuffle(array) {
