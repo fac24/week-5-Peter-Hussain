@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Broccoli from "./broccoli";
 
 import GameCard from "./GameCard";
-import Broccoli from "./Broccoli";
 
 // fetch data from github for each user
 //write a function fetch the userInfo from the api
@@ -16,6 +16,18 @@ let githubUsers = [
   "Bereketmebrahtu",
   "sonianb",
   "AsmahanM",
+  "alternadiva",
+  "Glombort",
+  "HusJAW",
+  "joe-dev-public",
+  "mariaalouisaa",
+  "miahbates",
+  "millipede-cpu",
+  "minju25kim",
+  "OrianP",
+  "paologhidoni",
+  "PJSalter",
+  "vasystus",
 ];
 
 function shuffle(array) {
@@ -109,6 +121,7 @@ export default function GameCardContainer() {
     return (
       <div className="game-card-container logo black">
         you found your self....time to add more broccoli to your diet
+        <Broccoli />
       </div>
     );
   } else {
