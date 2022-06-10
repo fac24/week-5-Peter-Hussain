@@ -1,5 +1,7 @@
 # Broccoli 🥦
 
+![strong-broccoli](https://user-images.githubusercontent.com/45575016/173065115-24f2c1af-647d-472a-bcee-dbec43499754.gif)
+
 # Designed and Developed by:
 
 - [Hussain](https://github.com/HusJAW): DevOps/Quality Assurance
@@ -17,4 +19,7 @@
 2. cd [my-app-name]
 3. npm install to install the dependencies
 4. npm run dev start the dev server
+
+![cool-broccoli](https://user-images.githubusercontent.com/45575016/173065159-525d3753-6b93-49a4-bf4f-c2848bef165d.gif)
+
 
