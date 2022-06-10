@@ -10,6 +10,11 @@
 - user will have to guess and pair the correct hidden user underneath the broccoli's
 - user then wins a broccoli.
 
+### 🧠 Core features:
+
+- fetching multiple users info rom github using the github api.
+- flipping broccolis to identify and guess which one is the winner.
+
 # Designed and Developed by:
 
 - [Hussain](https://github.com/HusJAW): DevOps/Quality Assurance
