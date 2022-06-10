@@ -12,7 +12,7 @@
 
 ### 🧠 Core features:
 
-- fetching multiple users info rom github using the github api.
+- fetching multiple users info from github using the github api.
 - flipping broccolis to identify and guess which one is the winner.
 
 # Designed and Developed by:
