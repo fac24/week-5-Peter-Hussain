@@ -1,4 +1,12 @@
-# Hussain & Peter
+# Broccoli 🥦
+
+# Designed and Developed by:
+
+- [Hussain](https://github.com/HusJAW): DevOps/Quality Assurance
+- [Peter](https://github.com/PJSalter): Scrum Facilitator/UX Lead
+
+### How did the broccoli feel about being served for dinner?
+### Answer: It was steamed!
 
 # Setup
 
