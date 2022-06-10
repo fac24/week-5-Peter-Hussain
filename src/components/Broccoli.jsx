@@ -1,6 +1,9 @@
 export default function Broccoli() {
   return (
     <div className="body">
+      <div className=" logo black">
+        you found your self....time to add more broccoli to your diet
+      </div>
       <button className="btn">
         <span>Broccoli fun</span>
       </button>

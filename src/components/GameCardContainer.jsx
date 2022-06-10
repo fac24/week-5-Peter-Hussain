@@ -120,9 +120,6 @@ export default function GameCardContainer() {
   } else if (winner) {
     return (
       <>
-        <div className="game-card-container logo black">
-          you found your self....time to add more broccoli to your diet
-        </div>
         <Broccoli />
       </>
     );
