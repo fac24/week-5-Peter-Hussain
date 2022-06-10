@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import GameCard from "./GameCard";
+import Broccoli from "./Broccoli";
 
 // fetch data from github for each user
 //write a function fetch the userInfo from the api
@@ -40,17 +42,24 @@ function shuffle(array) {
 // place them in sparet var
 // match them based on classes
 
-const handdleClick = (e) => {
-  let img = e.target;
-  img.classList.toggle("hidden");
-};
+// function clickFace() {
+//   const [click, setClicks] = useState(0);
+//   const [state, setState] = useState(null);
+
+//   let target = e.target;
+//   let targetId = e.target.id;
+//   setState(target);
+//   useEffect(() => {
+//     console.log(state);
+//   }, [state]);
+// }
 
 export default function GameCardContainer() {
-  const [users, setUsers] = useState([]);
-  // const [state, setState] = useState("");
-  // const [click, setClicks] = useState(0);
-
   // best placed to console log
+  const [users, setUsers] = useState([]);
+  const [name, setName] = React.useState(null);
+  const [winner, setWinner] = React.useState(false);
+  const [imgClass, setImgClass] = useState("");
 
   useEffect(() => {
     setUsers(shuffle(users));
@@ -65,7 +74,24 @@ export default function GameCardContainer() {
     });
   }, []);
 
-  if (users.length === 16) {
+  const handdleClick = (e) => {
+    let img = e.target;
+    img.classList.toggle("hidden");
+
+    setImgClass(img.classList[1]);
+    // console.log(name, "name state");
+  };
+
+  useEffect(() => {
+    console.log(imgClass);
+    console.log(name);
+    if (imgClass == name) {
+      console.log("click match");
+      setWinner(true);
+    }
+  }, [imgClass]);
+
+  if (name && !winner) {
     return (
       <div className="game-card-container">
         {users.map((item, key) => (
@@ -73,15 +99,34 @@ export default function GameCardContainer() {
             id={key}
             keys={item.id + key}
             img={item.avatar_url}
-            className={`game-card-img hidden ${item.login}`}
+            className={`game-card-img hidden ${item.login}`} // game-card-img would be zero, hidden would be index 1 and item.login would be index 2
             onClick={handdleClick}
           />
         ))}
       </div>
     );
+  } else if (winner) {
+    return (
+      <div className="game-card-container logo black">
+        you found your self....time to add more broccoli to your diet
+      </div>
+    );
   } else {
     return (
       <div className="game-card-container logo black">
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            setName(event.target.username.value.toLowerCase());
+          }}
+        >
+          <input
+            type="search"
+            aria-label="Search users"
+            placeholder="gihub username"
+            name="username"
+          />
+        </form>
         <div>
           <img
             className="rich"
@@ -94,3 +139,8 @@ export default function GameCardContainer() {
     );
   }
 }
+
+// we have search bar, user types names.
+// image appears of github profile. with choice of flipped card.
+// if this matches then broccoli appears.
+// click button for broccoli to dance.
