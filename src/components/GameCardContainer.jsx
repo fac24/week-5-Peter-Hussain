@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Broccoli from "./Broccoli";
 
 import GameCard from "./GameCard";
 
@@ -118,9 +119,12 @@ export default function GameCardContainer() {
     );
   } else if (winner) {
     return (
-      <div className="game-card-container logo black">
-        you found your self....time to add more broccoli to your diet
-      </div>
+      <>
+        <div className="game-card-container logo black">
+          you found your self....time to add more broccoli to your diet
+        </div>
+        <Broccoli />
+      </>
     );
   } else {
     return (
