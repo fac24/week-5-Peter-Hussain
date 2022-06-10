@@ -110,7 +110,7 @@ export default function GameCardContainer() {
             id={key}
             keys={item.id + key}
             img={item.avatar_url}
-            className={`game-card-img hidden ${item.login}`} // game-card-img would be zero, hidden would be index 1 and item.login would be index 2
+            className={`game-card-img hidden ${item.login.toLowerCase()}`} // game-card-img would be zero, hidden would be index 1 and item.login would be index 2
             onClick={handdleClick}
           />
         ))}
