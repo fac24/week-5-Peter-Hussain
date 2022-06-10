@@ -2,6 +2,8 @@
 
 ![strong-broccoli](https://user-images.githubusercontent.com/45575016/173065115-24f2c1af-647d-472a-bcee-dbec43499754.gif)
 
+## Deployed game here 🥦🥛 [Broccoli Milk](https://broccoli-milk.netlify.app/) 🥦🥛 on Netlify.
+
 # Designed and Developed by:
 
 - [Hussain](https://github.com/HusJAW): DevOps/Quality Assurance
